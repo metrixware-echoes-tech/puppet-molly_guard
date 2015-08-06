@@ -9,8 +9,8 @@ describe 'molly_guard', :type => 'class' do
     end
 
     it {
-      should contain_package('molly_guard')
-      should contain_service('molly_guard')
+      should contain_package('molly-guard')
+      should contain_service('molly-guard')
     }
   end
 
