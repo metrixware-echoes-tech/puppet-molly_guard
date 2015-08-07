@@ -10,7 +10,6 @@ describe 'molly_guard', :type => 'class' do
 
     it {
       should contain_package('molly-guard')
-      should contain_service('molly-guard')
     }
   end
 
