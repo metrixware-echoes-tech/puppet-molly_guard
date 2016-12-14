@@ -1,3 +1,5 @@
+# == Class: molly_guard
+#
 class molly_guard (
   $always_query_hostname = $molly_guard::params::always_query_hostname,
   $package_ensure        = $molly_guard::params::package_ensure,

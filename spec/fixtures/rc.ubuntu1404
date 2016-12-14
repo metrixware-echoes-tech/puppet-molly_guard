@@ -1,0 +1,3 @@
+# rc: Managed by puppet.
+#
+ALWAYS_QUERY_HOSTNAME=false

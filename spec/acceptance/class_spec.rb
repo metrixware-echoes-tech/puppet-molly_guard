@@ -1,12 +1,11 @@
 require 'spec_helper_acceptance'
 
 describe 'molly_guard class' do
-
   context 'default parameters' do
     # Using puppet_apply as a helper
     it 'should work with no errors' do
       pp = <<-EOS
-      class { 'molly_guard': }
+      include ::molly_guard
       EOS
 
       # Run it twice and test for idempotency

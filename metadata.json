@@ -1,6 +1,6 @@
 {
   "name": "echoes-molly_guard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Echoes Technologies",
   "summary": "Puppet module to manage Molly-Guard installation and configuration",
   "license": "Apache-2.0",
@@ -26,18 +26,19 @@
       "operatingsystemrelease": [
         "10.04",
         "12.04",
-        "14.04"
+        "14.04",
+        "16.04"
       ]
     }
   ],
   "requirements": [
     {
       "name": "pe",
-      "version_requirement": "3.x"
+      "version_requirement": ">= 3.2.0 < 5.0.0"
     },
     {
       "name": "puppet",
-      "version_requirement": "3.x"
+      "version_requirement": ">= 3.0.0 < 5.0.0"
     }
   ],
   "dependencies": [

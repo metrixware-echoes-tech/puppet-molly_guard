@@ -22,7 +22,6 @@
 
 Puppet module to manage Molly-Guard installation and configuration.
 
-
 ## Module Description
 
 This module installs and configures [Molly-Guard](http://anonscm.debian.org/cgit/collab-maint/molly-guard.git/).
@@ -32,7 +31,7 @@ This module installs and configures [Molly-Guard](http://anonscm.debian.org/cgit
 ### Beginning with molly_guard
 
 ```puppet
-include 'molly_guard'
+include ::molly_guard
 ```
 
 ## Usage
