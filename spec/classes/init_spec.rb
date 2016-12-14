@@ -96,7 +96,7 @@ describe 'molly_guard', :type => 'class' do
           })
         end
 
-        molly_guard_rc_fixture = File.read(fixtures("mollyguardrc.#{k}"))
+        molly_guard_rc_fixture = File.read(fixtures("rc.#{k}"))
         it { should contain_file('/etc/molly-guard/rc').with_content(molly_guard_rc_fixture) }
 
       end

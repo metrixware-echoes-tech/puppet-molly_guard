@@ -2,13 +2,14 @@ source ENV['GEM_SOURCE'] || 'https://rubygems.org'
 
 group :development, :unit_tests do
   gem 'rspec-puppet',                                     :require => false
-if RUBY_VERSION >= '1.8.7' && RUBY_VERSION < '1.9'
-  # metadata-json-lint > 0.0.11 requires semantic_puppet only available for ruby >= 1.9.3
-  gem 'metadata-json-lint', '= 0.0.11',                   :require => false
-else
-  gem 'metadata-json-lint',                               :require => false
-end
-  gem 'puppetlabs_spec_helper',                           :require => false
+  if RUBY_VERSION >= '1.8.7' && RUBY_VERSION < '1.9'
+    # metadata-json-lint > 0.0.11 requires semantic_puppet only available for ruby >= 1.9.3
+    gem 'metadata-json-lint', '= 0.0.11',                   :require => false
+    gem 'puppetlabs_spec_helper', '= 1.1.1',                :require => false
+  else
+    gem 'metadata-json-lint',                               :require => false
+    gem 'puppetlabs_spec_helper',                           :require => false
+  end
   gem 'puppet-lint',                                      :require => false
   gem 'puppet-lint-absolute_classname-check',             :require => false
   gem 'puppet-lint-alias-check',                          :require => false
