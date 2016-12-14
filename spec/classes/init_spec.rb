@@ -6,49 +6,49 @@ describe 'molly_guard', :type => 'class' do
         :release           => '6.0',
         :majrelease        => '6',
         :lsbdistcodename   => 'squeeze',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'debian7' =>
       { :osfamily          => 'Debian',
         :release           => '7.0',
         :majrelease        => '7',
         :lsbdistcodename   => 'wheezy',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'debian8' =>
       { :osfamily          => 'Debian',
         :release           => '8.0',
         :majrelease        => '8',
         :lsbdistcodename   => 'jessie',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'ubuntu1004' =>
       { :osfamily          => 'Debian',
         :release           => '10.04',
         :majrelease        => '10',
         :lsbdistcodename   => 'lucid',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'ubuntu1204' =>
       { :osfamily          => 'Debian',
         :release           => '12.04',
         :majrelease        => '12',
         :lsbdistcodename   => 'precise',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'ubuntu1404' =>
       { :osfamily          => 'Debian',
         :release           => '14.04',
         :majrelease        => '14',
         :lsbdistcodename   => 'trusty',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
     'ubuntu1604' =>
       { :osfamily          => 'Debian',
         :release           => '16.04',
         :majrelease        => '16',
         :lsbdistcodename   => 'xenial',
-        :packages          => 'molly-guard',
+        :packages          => 'molly_guard',
       },
   }
 
@@ -92,7 +92,6 @@ describe 'molly_guard', :type => 'class' do
             'owner'   => 'root',
             'group'   => 'root',
             'mode'    => '0644',
-            'content' => 'template(\'molly_guard/rc.erb\')',
           })
         end
 
@@ -118,12 +117,12 @@ describe 'molly_guard', :type => 'class' do
 
     context 'when package_ensure is set to valid string <absent>' do
       let(:params) { { :package_ensure => 'absent' } }
-      it { should contain_package('molly-guard').with_ensure('absent') }
+      it { should contain_package('molly_guard').with_ensure('absent') }
     end
 
     context 'when package_name is set to valid string <molly-guard>' do
       let(:params) { { :package_name => 'molly-guard' } }
-      it { should contain_package('molly-guard').with_name('molly-guard') }
+      it { should contain_package('molly_guard').with_name('molly-guard') }
     end
   end
 
@@ -133,50 +132,6 @@ describe 'molly_guard', :type => 'class' do
         :osfamily        => 'Debian',
         :lsbdistcodename => 'squeeze',
       }
-    end
-
-    context 'when EL is unsupported' do
-      let :facts do
-        { :osfamily                  => 'RedHat',
-          :operatingsystemmajrelease => '4',
-        }
-      end
-
-      it 'should fail' do
-        expect do
-          should contain_class('molly-guard')
-        end.to raise_error(Puppet::Error, /molly_guard doen't support EL\. Detected osfamily is <RedHat>/)
-      end
-    end
-
-    context 'when major release of Debian is unsupported' do
-      let :facts do
-        { :osfamily                  => 'Debian',
-          :operatingsystemmajrelease => '4',
-          :lsbdistcodename           => 'etch',
-        }
-      end
-
-      it 'should fail' do
-        expect do
-          should contain_class('molly_guard')
-        end.to raise_error(Puppet::Error, /molly_guard supports Debian 6 \(squeeze\), 7 \(wheezy\) and 8 \(jessie\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14.04 \(trusty\) and 16.04 \(xenial\). Detected lsbdistcodename is <etch>\./)
-      end
-    end
-
-    context 'when major release of Ubuntu is unsupported' do
-      let :facts do
-        { :osfamily                  => 'Debian',
-          :operatingsystemmajrelease => '8',
-          :lsbdistcodename           => 'hardy',
-        }
-      end
-
-      it 'should fail' do
-        expect do
-          should contain_class('molly_guard')
-        end.to raise_error(Puppet::Error, /molly_guard supports Debian 6 \(squeeze\), 7 \(wheezy\) and 8 \(jessie\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14.04 \(trusty\) and 16.04 \(xenial\). Detected lsbdistcodename is <hardy>\./)
-      end
     end
 
     context 'when osfamily is unsupported' do

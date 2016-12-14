@@ -10,7 +10,7 @@ class molly_guard::params {
       $package_name = 'molly-guard'
     }
     default: {
-      fail("Unsupported OS family: ${::osfamily}")
+      fail("molly_guard supports osfamilies Debian. Detected osfamily is <${::osfamily}>.")
     }
   }
 }
