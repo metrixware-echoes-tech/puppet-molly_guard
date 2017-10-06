@@ -38,7 +38,7 @@ include ::molly_guard
 
 ```puppet
 class { 'molly_guard':
-  always_query_hostanme => true,
+  always_query_hostname => true,
 }
 ```
 
