@@ -81,4 +81,4 @@ Debian family OSes are officially supported. Tested and built on Debian.
 
 ## Contributors
 
-The list of contributors can be found at: https://github.com/solution-libre/puppet-molly\_guard/graphs/contributors
+The list of contributors can be found at: https://github.com/solution-libre/puppet-molly_guard/graphs/contributors

@@ -12,7 +12,7 @@ describe 'molly_guard' do
 
         it do
           is_expected.to contain_package('molly_guard').with('ensure'   => 'present',
-							     'name'     => 'molly-guard',
+                                                             'name'     => 'molly-guard',
                                                              'provider' => nil)
         end
 
