@@ -99,13 +99,13 @@ describe 'molly_guard' do
         name: %w[always_query_hostname],
         valid: [true, 'true', false, 'false'],
         invalid: ['invalid', 3, 2.42, %w[array], { 'ha' => 'sh' }, nil],
-        message: '(is not a boolean|Unknown type of boolean)',
+        message: '(expects a value of type Boolean|is not a boolean|Unknown type of boolean)',
       },
       'string' => {
         name: %w[package_ensure package_name],
         valid: ['present'],
         invalid: [%w[array], { 'ha' => 'sh' }],
-        message: 'is not a string',
+        message: '(expects a String value|is not a string)',
       },
     }
 
