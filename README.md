@@ -1,24 +1,21 @@
-# molly_guard
+# molly\_guard
 
-[![Build Status](https://travis-ci.org/echoes-tech/puppet-molly_guard.svg?branch=master)](https://travis-ci.org/echoes-tech/puppet-molly_guard)
-[![Flattr Button](https://api.flattr.com/button/flattr-badge-large.png "Flattr This!")](https://flattr.com/submit/auto?user_id=echoes&url=https://forge.puppetlabs.com/echoes/molly_guard&title=Puppet%20module%20to%20manage%20Molly-Guard&description=This%20module%20installs%20and%20configures%20Molly-Guard.&lang=en_GB&category=software "Puppet module to manage Molly-Guard installation and configuration")
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/soli/molly_guard.svg)](https://forge.puppetlabs.com/soli/molly_guard)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/soli/molly_guard.svg)](https://forge.puppetlabs.com/soli/molly_guard)
+[![Puppet Forge Score](http://img.shields.io/puppetforge/f/soli/molly_guard.svg)](https://forge.puppetlabs.com/soli/molly_guard)
+[![Build Status](https://travis-ci.org/solution-libre/puppet-molly_guard.svg?branch=master)](https://travis-ci.org/solution-libre/puppet-molly_guard)
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with molly_guard](#setup)
-    * [Beginning with molly_guard](#beginning-with-molly_guard)
-4. [Usage - Configuration options and additional functionality](#usage)
+1. [Module Description - What the module does and why it is useful](#module-description)
+2. [Setup - The basics of getting started with molly\_guard](#setup)
+    * [Beginning with molly\_guard](#beginning-with-molly_guard)
+3. [Usage - Configuration options and additional functionality](#usage)
     * [Always query hostanme](#always-query-hostanme)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-6. [Limitations - OS compatibility, etc.](#limitations)
-7. [Development - Guide for contributing to the module](#development)
-8. [Contributors](#contributors)
-
-## Overview
-
-Puppet module to manage Molly-Guard installation and configuration.
+4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
+7. [Contributors](#contributors)
 
 ## Module Description
 
@@ -26,7 +23,7 @@ This module installs and configures [Molly-Guard](http://anonscm.debian.org/cgit
 
 ## Setup
 
-### Beginning with molly_guard
+### Beginning with molly\_guard
 
 ```puppet
 include ::molly_guard
@@ -48,13 +45,13 @@ class { 'molly_guard':
 
 #### Public classes
 
-* molly_guard: Main class, includes all other classes.
+* molly\_guard: Main class, includes all other classes.
 
 #### Private classes
 
-* molly_guard::params: Sets parameter defaults per operating system.
-* molly_guard::install: Handles the packages.
-* molly_guard::config: Handles the configuration file.
+* molly\_guard::params: Sets parameter defaults per operating system.
+* molly\_guard::install: Handles the packages.
+* molly\_guard::config: Handles the configuration file.
 
 #### Parameters
 
@@ -70,7 +67,7 @@ Tells Puppet whether the Molly-Guard package should be installed, and what versi
 
 ##### `package_name`
 
-Tells Puppet what Molly-Guard package to manage. Valid options: string. Default value: 'molly_guard'
+Tells Puppet what Molly-Guard package to manage. Valid options: string. Default value: 'molly\_guard'
 
 ## Limitations
 
@@ -78,10 +75,10 @@ Debian family OSes are officially supported. Tested and built on Debian.
 
 ## Development
 
-[Echoes Technologies](https://echoes.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+[Solution Libre](https://www.solution-libre.fr)'s modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
 
-[Fork this module on GitHub](https://github.com/echoes-tech/puppet-molly_guard/fork)
+[Fork this module on GitHub](https://github.com/solution-libre/puppet-molly_guard/fork)
 
 ## Contributors
 
-The list of contributors can be found at: https://github.com/echoes-tech/puppet-molly_guard/graphs/contributors
+The list of contributors can be found at: https://github.com/solution-libre/puppet-molly\_guard/graphs/contributors

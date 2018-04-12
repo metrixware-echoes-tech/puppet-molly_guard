@@ -1,12 +1,12 @@
 {
-  "name": "echoes-molly_guard",
+  "name": "soli-molly_guard",
   "version": "0.1.1",
-  "author": "Echoes Technologies",
+  "author": "Solution Libre SAS",
   "summary": "Puppet module to manage Molly-Guard installation and configuration",
   "license": "Apache-2.0",
-  "source": "https://github.com/echoes-tech/puppet-molly_guard",
-  "project_page": "https://github.com/echoes-tech/puppet-molly_guard",
-  "issues_url": "https://github.com/echoes-tech/puppet-molly_guard/issues",
+  "source": "https://github.com/soli-tech/puppet-molly_guard",
+  "project_page": "https://github.com/soli-tech/puppet-molly_guard",
+  "issues_url": "https://github.com/soli-tech/puppet-molly_guard/issues",
   "tags": [
     "shutdown",
     "reboot",
