@@ -1,8 +1,4 @@
-## 2018-04-12 - Release 0.1.4
-### Summary
-This release fixes bad URL.
-
-## 2018-04-12 - Release 0.1.3
+## 2018-04-12 - Release 0.1.5
 ### Summary
 This release adds support to Ubuntu Bionic Beaver and changes syntax for Puppet 5.
 

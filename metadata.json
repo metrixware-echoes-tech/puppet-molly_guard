@@ -1,6 +1,6 @@
 {
   "name": "soli-molly_guard",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Solution Libre SAS",
   "summary": "Puppet module to manage Molly-Guard installation and configuration",
   "license": "Apache-2.0",
