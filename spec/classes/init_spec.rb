@@ -96,15 +96,15 @@ describe 'molly_guard' do
 
     validations = {
       'bool_stringified' => {
-        name: %w[always_query_hostname],
+        name: ['always_query_hostname'],
         valid: [true, 'true', false, 'false'],
-        invalid: ['invalid', 3, 2.42, %w[array], { 'ha' => 'sh' }, nil],
+        invalid: ['invalid', 3, 2.42, ['array'], { 'ha' => 'sh' }, nil],
         message: '(expects a value of type Boolean|is not a boolean|Unknown type of boolean)',
       },
       'string' => {
-        name: %w[package_ensure package_name],
+        name: ['package_ensure', 'package_name'],
         valid: ['present'],
-        invalid: [%w[array], { 'ha' => 'sh' }],
+        invalid: [['array'], { 'ha' => 'sh' }],
         message: '(expects a String value|is not a string)',
       },
     }
