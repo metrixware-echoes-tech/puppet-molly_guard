@@ -1,3 +1,8 @@
+## 2018-11-23 - Release 0.1.6
+### Summary
+
+This release uses PDK 1.7.1 and claims compatibility with Puppet 6.0.
+
 ## 2018-04-12 - Release 0.1.5
 ### Summary
 This release adds support to Ubuntu Bionic Beaver and changes syntax for Puppet 5.
