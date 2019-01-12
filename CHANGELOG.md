@@ -1,3 +1,8 @@
+## 2019-01-12 - Release 0.1.7
+### Summary
+
+This release uses PDK 1.8.0.
+
 ## 2018-11-23 - Release 0.1.6
 ### Summary
 
