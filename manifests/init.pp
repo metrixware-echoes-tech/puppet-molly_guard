@@ -6,7 +6,7 @@ class molly_guard (
   $package_name          = $molly_guard::params::package_name,
 ) inherits molly_guard::params {
   # <stringified variable handling>
-  if is_string($always_query_hostname) == true {
+  if is_string($always_query_hostname) {
     $always_query_hostname_bool = str2bool($always_query_hostname)
   } else {
     $always_query_hostname_bool = $always_query_hostname
@@ -19,8 +19,8 @@ class molly_guard (
   validate_string($package_name)
   # </variable validations>
 
-  anchor { "${module_name}::begin": } ->
-  class { "${module_name}::install": } ->
-  class { "${module_name}::config": } ->
-  anchor { "${module_name}::end": }
+  anchor { "${module_name}::begin": }
+  -> class { "${module_name}::install": }
+  -> class { "${module_name}::config": }
+  -> anchor { "${module_name}::end": }
 }
